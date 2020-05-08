@@ -7,7 +7,7 @@
 1. 整理获取到的JSON文件并输出成可供人阅读的txt格式。（第一行题号 第二行答案 第三行选项供校对）
 
 ## 使用方法
-
+[下载工具](https://github.com/NamakoNeko/USTH_Marx_examSystemTextReformater/releases)，找个地方解压(推荐D盘根目录，比较好找)。
 先安装[Fiddler](https://www.telerik.com/fiddler)，[安装教程](https://blog.csdn.net/ychgyyn/article/details/82154433)。
 
 仅参考Fiddler中电脑抓包的部分，因安卓高版本系统的缘故导致目前在手机上无法正常进行抓包。
