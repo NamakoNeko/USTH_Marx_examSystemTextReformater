@@ -18,7 +18,7 @@
 
 登录电脑版微信，找到马院思政之音公众号并点开，选取右上角三个点里的进入公众号，找到在线测试系统，此时会启动一个微信小程序。
 
-打开Fiddler，在Fiddler右侧栏位中找到Filter选项卡，在Process-how only traffic from的下拉栏中选取WeChatApp:**** -智能化学习考试系统，选中 点击此页面右上角Actions-Run Filterset Now启动筛选。
+打开Fiddler，在Fiddler右侧栏位中找到Filter选项卡，在Process-how only traffic from的下拉栏中选取WeChatApp:**** -智能化学习考试系统 (**** 是任意数字)，选中 点击此页面右上角Actions-Run Filterset Now启动筛选。
 
 登录在线测试系统系统，选择练习-你要抓取的科目，进入章节选择页面后先不要动。
 
