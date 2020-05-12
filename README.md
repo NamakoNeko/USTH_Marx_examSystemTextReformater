@@ -6,12 +6,19 @@
 
 1. 整理获取到的JSON文件并输出成可供人阅读的txt格式。（第一行题号 第二行答案 第三行选项供校对）
 
+## 未实现的功能
+
+1. 整合抓包功能进工具。（但手动使用其他软件进行配合并操作完全可以实现目的，只是操作稍微复杂。）
+
 ## 使用方法
+此方法为Windows下的例子，其他平台请参考并自行替换可用的抓包工具并自行寻找部署环境方法，Linux/Unix系OS下请将脚本第40行的\\改为/。
+
 [下载工具](https://github.com/NamakoNeko/USTH_Marx_examSystemTextReformater/releases)，找个地方解压(推荐D盘根目录，比较好找)。
 
 先安装[Fiddler](https://www.telerik.com/fiddler)，[安装教程](https://blog.csdn.net/ychgyyn/article/details/82154433)。
 
-仅参考Fiddler中电脑抓包的部分，因安卓高版本系统的缘故导致目前在手机上无法正常进行抓包。
+仅参考Fiddler中电脑抓包的部分。因安卓高版本系统的缘故导致目前在手机上无法正常进行抓包（在安卓7.0版本以上证书管理更为严格）。
+>如需采取安卓手机端抓取请先安装[Fiddler AddOns](https://www.telerik.com/fiddler/add-ons)中的CertMaker for iOS and Android这个插件（减少Fiddler生成证书有效期防止出现证书鉴权问题），Android端必须安装Magisk，设置好本机WiFi的代理设置后通过Fiddler Echo Services(默认地址为 电脑IP:8888)安装根目录证书，并安装Move Certificates模块后重启手机即可正常在电脑端抓取，但后续教程中筛选功能需要做略微调整，请读者自行在互联网搜索方法。
 
 安装[Python](https://www.python.org/)，[安装教程](https://www.cnblogs.com/lvtaohome/p/11121377.html)。
 
@@ -27,4 +34,7 @@
 
 打开命令提示符(Win+R输入cmd并回车)，定位到工具所在目录，输入`py reformate.py`并回车，qstorage目录下应该生成了整理好的txt文件，保存你要的txt文件。
 
-使用完之后记得清理掉qstorage目录下的所有文件，不然下次运行会混乱（我调试的时候故意没加清理目录的代码，防止误删要的文件）。
+使用完之后记得清理掉qstorage目录下的所有文件，不然下次运行会混乱（我调试的时候故意没加清理目录的代码，防止误删要保存的文件）。
+
+## 编后语
+该方法是我在偶然中发现的，当时在做练习题的时候忘记关Fiddler了，突然我在页面里发现了抓取到了小程序传输的json并点开看了一下，除了套了一层https传输之外竟然没有任何加密手段，题目答案选项直接传到本地进行正误校验，后续测试中发现考试也是如此，开发公司心真大。
